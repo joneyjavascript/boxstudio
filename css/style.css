@@ -3493,6 +3493,7 @@ h6 {
 
   .testi_item .media {
     display: block; } }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section_content h3 {
     font-size: 32px;
@@ -3810,6 +3811,8 @@ h6 {
     padding: 60px 0; }
   .about_page .frequently_area, .upcoming_games .frequently_area {
     padding: 60px 0; } }
+
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /* Footer Area css
