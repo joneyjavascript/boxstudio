@@ -675,10 +675,23 @@ img {
   align-self: center;
 }
 
+/*  home css banner
+============================================================================================ */
+.banner_content {
+  padding: 50px;
+  background: #00000052;
+  margin-left: 0;
+  margin-top: 50px;
+}
+/*---------------------------------------------------- */
+
 .home_banner_area .banner_inner .banner_content {
   text-align: left;
   color: #fff;
-  margin-left: 70px;
+  padding: 50px;
+  background: #00000052;
+  margin-left: 0;
+  margin-top: 50px;
 }
 
 .home_banner_area .banner_inner .banner_content h2 {
@@ -5002,7 +5015,7 @@ h6 {
   .home_banner_area .banner_content {
     margin-left: 20px !important;
   }
-
+  
   .gallery_area {
     padding: 60px 0 40px;
   }
@@ -5285,4 +5298,15 @@ body {
   height: 100%;
   border: none;
 
+}
+
+/*  Footer css
+============================================================================================ */
+/*---------------------------------------------------- */
+footer {
+  position: absolute;
+  padding-top: 120px;
+  color: #2c28b1;
+  width: 100%;
+  text-align: center;
 }
