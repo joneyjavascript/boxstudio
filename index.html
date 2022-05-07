@@ -138,9 +138,9 @@
 		<!--================End Home Video six faces overpower =================-->
 
 		<footer>
-			<p>2021-<span id="ano-atual">2022</span> (versão 1.0.0)</p>
+			<p>2021-<span id="anoAtual"></span> (versão 1.2.0)</p>
 			<p>Website adaptado do template de <a href="https://colorlib.com/wp/template/comodo/">Colorlib</a></p>
-		</footer>
+		</footer>	
 	
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -163,5 +163,9 @@
 		<script src="js/gmaps.min.js"></script>
 		<script src="js/theme.js"></script>
 		<script src="js/index.js"></script>
+
+		<script>
+			const data = new Date();
+			document.getElementById("anoAtual").innerHTML = data.getFullYear();</script>
 	</body>
 </html>
