@@ -3,7 +3,16 @@ var startTimestamp = getNow();
 
 function irParaSteam(){
     registerRedirectToSteamClick();
-    window.open("https://store.steampowered.com/app/1799020/Six_Faces__Overpower", "_blank");
+
+    var deviceDetails = navigator.userAgent;
+	var someMobileKeywords = /android|iphone|kindle|ipad/i;
+    var isMobile = someMobileKeywords.test(deviceDetails);
+    
+    if (isMobile) {
+        window.open("https://store.steampowered.com/app/1799020?utm_source=boxstudio_website&utm_campaign=default&utm_medium=mobile", "_blank");
+    } else {
+        window.open("https://store.steampowered.com/app/1799020?utm_source=boxstudio_website&utm_campaign=default&utm_medium=web", "_blank");
+    }
 }
 
 function registerRedirectToSteamClick(){
