@@ -3,16 +3,28 @@ var startTimestamp = getNow();
 
 function irParaSteam(){
     registerRedirectToSteamClick();
-
-    var deviceDetails = navigator.userAgent;
-	var someMobileKeywords = /android|iphone|kindle|ipad/i;
-    var isMobile = someMobileKeywords.test(deviceDetails);
-    
-    if (isMobile) {
-        window.open("https://store.steampowered.com/app/1799020?utm_source=boxstudio_website&utm_campaign=default&utm_medium=mobile", "_blank");
-    } else {
-        window.open("https://store.steampowered.com/app/1799020?utm_source=boxstudio_website&utm_campaign=default&utm_medium=web", "_blank");
+    if (isMobileDevice()){
+        openSteamGameWithUTM("1799020", "mobile")
+    }else{
+        openSteamGameWithUTM("1799020", "web")
     }
+}
+
+function isMobileDevice(){
+    const deviceDetails = navigator.userAgent;
+	const someMobileKeywords = /android|iphone|kindle|ipad/i;
+    const isMobile = someMobileKeywords.test(deviceDetails);
+    
+    return isMobile;
+}
+
+function openSteamGameWithUTM(gameId, utm_medium, utm_campaign="default"){
+    const steamLink= "https://store.steampowered.com/app/";
+    const utm_source= "boxstudio_website";
+
+    const gameLinkWithUtmParameters = `${ steamLink }${ gameId }?utm_source=${ utm_source }&utm_campaign=${ utm_campaign }&utm_medium=${ utm_medium }`
+    
+    window.open(gameLinkWithUtmParameters, "_blank");
 }
 
 function registerRedirectToSteamClick(){
