@@ -1,7 +1,7 @@
 
 var startTimestamp = getNow();
 
-function irParaSteam(){
+function goToSteam(){
     registerRedirectToSteamClick();
     if (isMobileDevice()){
         openSteamGameWithUTM("1799020", "mobile")
